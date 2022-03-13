@@ -1,8 +1,7 @@
 <template>
   <button class="s-button" :class="{[`icon-${iconPosition}`]:true}">
-    <svg class="icon" aria-hidden="true" >
-      <use :xlink:href="`#icon-${icon}`"></use>
-    </svg>
+    <s-icon class="icon" v-if="icon" :name="icon">
+    </s-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -11,7 +10,17 @@
 
 <script>
   export default {
-  props:['icon','iconPosition']
+  // props:['icon','iconPosition'],
+    props:{
+      icon:{},
+      iconPosition:{
+        type:String,
+        default:'left',
+        validator(value){
+          return value=='left'|| value =='right'
+        }
+      }
+    }
   }
 </script>
 
