@@ -6,13 +6,29 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UI</title>
+    <style>
+        * {margin: 0;padding: 0; box-sizing:border-box;}
+        :root{
+            --button-height:32px;
+            --font-size:14px;
+            --color:red;
+        }
+    </style>
+    <style>
+        .s-button{
+            font-size: var(--font-size);
+            color:var(--color)
+        }
+    </style>
 </head>
 <body>
 <div id="app">
     {{message}}
+    <s-button></s-button>
 </div>
 <script src="./node_modules/vue/dist/vue.min.js"></script>
-<!--<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>-->
+<script src="button.js"></script>
+
 <script>
     new Vue({
         el:'#app',
