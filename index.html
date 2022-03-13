@@ -11,31 +11,27 @@
         :root{
             --button-height:32px;
             --font-size:14px;
-            --color:red;
+            --color:#333;
+            --button-bg:white;
+            --button-active-bg:#eee;
+            --border-radius:4px;
+            --border-color:#999;
+            --border-color-hover:#666;
+        }
+        #app{
+            margin: 20px;
         }
     </style>
     <style>
-        .s-button{
-            font-size: var(--font-size);
-            color:var(--color)
-        }
+
     </style>
 </head>
 <body>
 <div id="app">
-    {{message}}
-    <s-button></s-button>
+    <div>
+        <s-button></s-button>
+    </div>
 </div>
-<script src="./node_modules/vue/dist/vue.min.js"></script>
-<script src="button.js"></script>
-
-<script>
-    new Vue({
-        el:'#app',
-        data:{
-            message:'hi'
-        }
-    })
-</script>
+<script src="src/app.js"></script>
 </body>
 </html>
