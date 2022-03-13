@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/Wang-X-S/shisan-Ui#readme",
   "dependencies": {
-    "vue": "^3.2.31"
+    "vue": "^2.5.16"
   }
 }
