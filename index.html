@@ -35,16 +35,16 @@
 <body>
 <div id="app">
     <div>
-        <s-button icon="setting" icon-position="right">
+        <s-button >
             按钮
         </s-button>
-        <s-button icon="setting" >
-            按钮2
+        <s-button icon="setting"  @click="()=>{console.log(123)}">
+            按钮
         </s-button>
-        <s-button >
-            按钮3
+        <s-button icon="setting" icon-position="right"  >
+            icon右侧按钮
         </s-button>
-        <s-button icon="loading" >
+        <s-button :loading="loading1" @click="loading1=!loading1">
             loading按钮
         </s-button>
     </div>
